@@ -1,5 +1,5 @@
 ---
-layou: post
+layout: post
 title: "PHP Bashing #2"
 date: 2011-11-02 19:57
 category: programming
