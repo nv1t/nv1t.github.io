@@ -122,7 +122,7 @@ Ich mache mir Sorgen, was da wohl alles rausgeschickt wurde, bzw. dass ich irgen
 
 Also starte ich auf meinem Testserver ein tcpdump um die Meldungen exakt mitzuloggen, was eigentlich fuer Calls im Hintergrund durchgehen:
 
-![Wiresharkdump](http://images.hoeja.de/blog/wiresharkdump.png)
+{% lightbox http://images.hoeja.de/blog/wiresharkdump.png, Wireshark, Wireshark Screenshot %}
 
 Es wird also ein GET Request aufgerufen, der einen base64 Encodierten Datensatz uebertraegt. (wer haette es gedacht...)
 Die Uebertragung geht an shayup.com. Ein whois loest auf, wer da wohl dahintersteht:
