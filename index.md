@@ -1,46 +1,26 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Eleventeen
+tagline: "Coz' imaginary numbers can be real"
 ---
 {% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
-
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
+{% for post in site.posts %}
+<div class="container">
+    <article>
+        <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <time>Posted on: {{ post.date | date_to_string }}.</time>
+        {{ post.content }}
+        <div class="blog-feedback">
+            <h2 class="blog-feedback-header with-twitter">
+                Have feedback on this post? Let <a href="https://twitter.com/intent/tweet?text=@{{ site.twitter }}&url=http://{{ site.url }}{{ post.url }}" target="blank">@{{ site.twitter }}</a> know on Twitter.
+            </h2>
+            <p class="blog-feedback-description">
+                Want to talk about this over email? <a href="mailto:{{ site.email }}">Contact me</a>.
+            </p>
+        </div>
+    </article>
+    <div class="links">Posted in <a href="#">{{ post.category }}</a>. <a href="{{ post.url }}">Permalink</a> to post.</div>
+</div>
+{% endfor %}
 
