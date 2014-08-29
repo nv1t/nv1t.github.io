@@ -26,9 +26,9 @@ teuer.
 
 ich entdeckte in einer Datei des Themes interessante Strukturen ala:
 
-{% highlight php %}
+```php
 eval(gzinflate(base64_decode(....));
-{% endhighlight %}
+```
 
 Das machte mich stutzig und ich wunderte mich, dass jemand soweit gehen wuerde den Hack direkt in das Theme zu schreiben.
 
