@@ -6,6 +6,8 @@ category: programming
 tags: [bashing, de, php, python, wtf]
 ---
 
+{% include JB/setup %}
+
 Ich hab mich heute auf die Suche nach einer guten Alternative zu "php           
 -a" gemacht. Es funktioniert prima, aber ist ein bisschen komisch. Ich          
 hatte immer gehofft, dass ich auf sowas wie: ipython stosse. Finaly,            
